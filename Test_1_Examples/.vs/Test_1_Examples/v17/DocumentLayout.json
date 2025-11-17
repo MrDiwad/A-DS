@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\A-DS\\Test_1_Examples\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A0B8CE-EF8D-4E9D-A8CC-A638356C2FC5}|Test_1_Examples\\Test_1_Examples.vcxproj|C:\\Users\\Admin\\source\\repos\\A-DS\\Test_1_Examples\\Test_1_Examples\\Test_1_Examples.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B0A0B8CE-EF8D-4E9D-A8CC-A638356C2FC5}|Test_1_Examples\\Test_1_Examples.vcxproj|solutionrelative:Test_1_Examples\\Test_1_Examples.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Test_1_Examples.cpp",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\A-DS\\Test_1_Examples\\Test_1_Examples\\Test_1_Examples.cpp",
+              "RelativeDocumentMoniker": "Test_1_Examples\\Test_1_Examples.cpp",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\A-DS\\Test_1_Examples\\Test_1_Examples\\Test_1_Examples.cpp",
+              "RelativeToolTip": "Test_1_Examples\\Test_1_Examples.cpp",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-17T16:37:22.533Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
