@@ -111,6 +111,37 @@ int displayArray() {
     return 0;
 }
 
+int sumOfSquare() {
+    int sumOfSquare = 0;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
+            sumOfSquare += (tab[i][j]) * (tab[i][j]);
+        }
+        
+    }
+    cout << "Sum of squares: " << sumOfSquare << endl;
+    return 0;
+}
+
+int transposition() {
+    cout << "Transposition: " << endl;
+    int AR[5][3];
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 5; j++) {
+            AR[j][i] = tab[i][j];
+        }
+    }
+    for (int w = 0; w < columns; w++) {
+        for (int z = 0; z < rows; z++) {
+            cout << AR[w][z] << " ";
+        }
+        cout << endl;
+
+    }
+    return 0;
+}
+
+
 int main()
 {
     displayArray();
@@ -126,5 +157,8 @@ int main()
     highestLowestIndex();
     cout << "==============================" << endl;
     lowestSquare();
-
+    cout << "==============================" << endl;
+    sumOfSquare();
+    cout << "==============================" << endl;
+    transposition();
 }
