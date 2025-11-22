@@ -1,39 +1,58 @@
 ﻿#include <iostream>
+# define M 3
+#define N 5
+
 using namespace std;
 
-int tab[3][5] = { {1, 100, 8, 90, -1},
+
+
+int tab[M][N] = { {1, 100, 8, 90, -1},
                   {0, 1, 2, -2, 100},
                   {10, 11, 12, -21, 100}};
 
 int rows = 3, columns = 5;
 
+int arrayPrinter(int array[], int size) {
+    for (int i = 0; i < size; i++) {
+        cout << array[i] << " ";
+    }
+    cout << endl;    
+    return 0;
+}
+
 int smallestValueInRow() {
-    for (int i = 0; i < rows; i++) {
+    int smallestValueArray[M] = {};
+    for (int i = 0; i < M; i++) {
         int smallestValue = tab[i][0];
-        for (int j = 0; j < columns; j++) {
+        for (int j = 0; j < N; j++) {
             if (tab[i][j] < smallestValue) {
                 smallestValue = tab[i][j];
             }
         }
-        cout << "Smallest value in " << i + 1 << " row is " << smallestValue << endl;
+        smallestValueArray[i] = smallestValue;
     }
+    arrayPrinter(smallestValueArray, 3);
     return 0;
 }
 
 int biggestValueInRow() {
-    for (int i = 0; i < rows; i++) {
-        int biggest = tab[i][0];
-        for (int j = 0; j < columns; j++) {
-            if (tab[i][j] >biggest) {
-                biggest = tab[i][j];
+    int biggestValueArray[M] = {0};
+    for (int i = 0; i < M; i++) {
+        biggestValueArray[i] = tab[i][0];
+        //int biggest = tab[i][0];
+        for (int j = 1; j < N; j++) {
+            if (tab[i][j] >biggestValueArray[i]) {
+                biggestValueArray[i] = tab[i][j];
             }
         }
-        cout << "Biggest value in " << i + 1 << " row is " << biggest << endl;
+        //biggestValueArray[i] = biggest;
     }
+    arrayPrinter(biggestValueArray, 3);
     return 0;
 }
 
 int smallestValueInColumn() {
+    int smallestValueArray[5] = {};
     for (int i = 0; i < columns; i++) {
         int smallestValue = tab[0][i];
         for (int j = 0; j < rows; j++) {
@@ -41,12 +60,14 @@ int smallestValueInColumn() {
                 smallestValue = tab[j][i];
             }
         }
-        cout << "Smallest value in " << i + 1 << " column is " << smallestValue << endl;
+        smallestValueArray[i] = smallestValue;
     }
+    arrayPrinter(smallestValueArray,5);
     return 0;
 }
 
 int biggestValueInColumn() {
+    int biggestValueArray[5] = {};
     for (int i = 0; i < columns; i++) {
         int biggest = tab[0][i];
         for (int j = 0; j < rows; j++) {
@@ -54,8 +75,9 @@ int biggestValueInColumn() {
                 biggest = tab[j][i];
             }
         }
-        cout << "Biggest value in " << i + 1 << " column is " << biggest << endl;
+        biggestValueArray[i] = biggest;
     }
+    arrayPrinter(biggestValueArray, 5);
     return 0;
 }
 
@@ -71,7 +93,7 @@ int highestLowestIndex() {
                 biggestIndex[0] = i;
                 biggestIndex[1] = j;
             }
-            else if (tab[i][j] < lowest) {
+            if (tab[i][j] < lowest) {
                 lowest = tab[i][j];
                 lowestIndex[0] = i;
                 lowestIndex[1] = j;
@@ -140,18 +162,20 @@ int transposition() {
     }
     return 0;
 }
-
-
 int main()
 {
     displayArray();
     cout << "==============================" << endl;
+    cout << "Smallest value in each row: " << endl;
     smallestValueInRow();
     cout << "=============================="<< endl;
+    cout << "Smallest value in each column: " << endl;
     smallestValueInColumn();
     cout << "==============================" << endl;
+    cout << "Biggest value in each column: " << endl;
     biggestValueInColumn();
     cout << "==============================" << endl;
+    cout << "Biggest value in each row: " << endl;
     biggestValueInRow();
     cout << "==============================" << endl;
     highestLowestIndex();
